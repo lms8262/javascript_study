@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      // 숫자를 입력받습니다.
+      const rawInput = prompt("원의 반지름을 cm단위로 입력해주세요.");
+
+      //숫자 형태로 변환합니다.
+      const radius = Number(rawInput);
+
+      //원의 넓이와 둘레를 구해 출력하세요.
+      const area = 3.14 * radius * radius;
+      const round = 2 * 3.14 * radius;
+
+      document.write(`반지름이 ${radius}cm인 원의 넓이는 ${area}cm<sup>2</sup>입니다.<br>`);
+      document.write(`반지름이 ${radius}cm인 원의 둘레는 ${round}cm입니다.`);
+    </script>
+  </head>
+  <body></body>
+</html>

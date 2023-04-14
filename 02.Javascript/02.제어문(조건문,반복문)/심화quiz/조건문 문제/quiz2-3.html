@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = Number(prompt('첫번째 숫자를 입력해주세요.'));
+        var b = Number(prompt('두번째 숫자를 입력해주세요.'));
+        var c = Number(prompt('세번째 숫자를 입력해주세요.'));
+
+        var max 
+        var min
+        var sum = a + b + c;
+        var ave = (a + b + c) / 3;
+
+        if (a >= b) {
+            max = a;
+            min = b;
+        } else {
+            max = b;
+            min = a;
+        }
+
+        if (max <= c) {
+            max = c;
+        }
+
+        if (min >= c) {
+            min = c;
+        }
+        
+        document.write(`최대값: ${max}`);
+        document.write(`최소값: ${min}`);
+        document.write(`합계: ${sum}`);
+        document.write(`평균: ${ave}`);
+    </script>
+</body>
+</html>
