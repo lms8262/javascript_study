@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/* header */
+header {
+  height: 130px;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.nav__logo {
+  width: 250px;
+  height: 50px;
+  /* text-decoration: none;
+  color: green;
+  font-size: 50px;
+  font-weight: bold; */
+  background-image: url(../image/01\ NAVER\ Logo_Green.png);
+  background-size: 100% 100%;
+}
+
+/* main */
+
+.main__content {
+  margin-bottom: 15px;
+}
+
+.main__title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.main__phone {
+  margin-bottom: 10px;
+}
+
+.phone__btn {
+  font-size: 14px !important;
+  color: white !important;
+  font-weight: bold !important;
+  background-color: #03c75a !important;
+  border: solid 1px rgba(0, 0, 0, 0.08) !important;
+}
+
+.register__btn {
+  color: white !important;
+  font-weight: bold !important;
+  background-color: #03c75a !important;
+  border: solid 1px rgba(0, 0, 0, 0.08);
+}
+
+/* footer */
+
+footer {
+  height: 60px;
+  line-height: 60px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__logo {
+  /* text-decoration: none;
+  color: green;
+  font-size: 20px;
+  font-weight: bold; */
+}
+
+.footer__logo > a {
+  display: inline-block;
+  margin: 0 auto;
+  background-image: url(../image/01\ NAVER\ Logo_Green.png);
+  background-size: 100% 100%;
+  width: 70px;
+  height: 15px;
+}
+
+.main__phoneInput {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__phoneInput > div:nth-child(1) {
+  width: 70%;
+}
+
+.main__phoneInput > div:nth-child(2) {
+  display: flex;
+  justify-content: right;
+  width: 30%;
+}

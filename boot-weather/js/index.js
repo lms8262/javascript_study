@@ -149,6 +149,7 @@
     return temp;
   }
 
+  // 도시의 날씨 구하기
   function getWeatherWithCity(city) {
     var temp = {};
     var urlAPI =

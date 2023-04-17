@@ -9,3 +9,7 @@ main > section {
 #map {
   height: 500px !important;
 }
+
+main > section:nth-child(2) a {
+  text-decoration: none !important;
+}

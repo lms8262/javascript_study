@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+main {
+  margin-top: 56px;
+}
+
+main > section {
+  padding: 40px 0;
+}
+
+.card__content {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
