@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      //1. 전체 url 가져오기
+      const currentURL = location.href;
+
+      //2. 쿼리스트링 파라메터 가져오기
+      const urlObj = new URL(currentURL);
+      const params = urlObj.searchParams;
+      const id = params.get("id");
+
+      console.log(id);
+
+      const movieURL = `https://api.themoviedb.org/3/movie/${id}?api_key=bb51d3adf7f25504f29f4b4426a7ccbe&language=ko-KR&append_to_response=1`;
+      console.log(movieURL);
+      $.ajax({
+        type: "GET",
+        url: movieURL,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+          console.log("전체 data:", data);
+        },
+        error: function (request, status, error) {
+          console.log("code:" + request.status);
+          console.log("message:" + request.responseText);
+          console.log("error:" + error);
+        },
+      });
+    </script>
+  </body>
+</html>

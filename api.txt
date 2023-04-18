@@ -1,0 +1,24 @@
+openweather  api 키
+
+7ba5be1502e294a8b00fb31fadb4d9a9
+
+https://api.openweathermap.org/data/2.5/weather?q=Incheon&appid=7ba5be1502e294a8b00fb31fadb4d9a9
+
+
+카카오 맵 api 키
+
+0a739bae4a14d15a729022b100ccb747
+
+
+영화 api 키
+
+bb51d3adf7f25504f29f4b4426a7ccbe
+
+영화 이미지 주소
+https://image.tmdb.org/t/p/w500/
+https://image.tmdb.org/t/p/original/{값}.jpg
+
+뉴스 api 키
+
+8815c5bed9b04d38ad2bf36357404c25
+
