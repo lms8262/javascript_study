@@ -18,7 +18,12 @@ bb51d3adf7f25504f29f4b4426a7ccbe
 https://image.tmdb.org/t/p/w500/
 https://image.tmdb.org/t/p/original/{값}.jpg
 
+
 뉴스 api 키
 
 8815c5bed9b04d38ad2bf36357404c25
 
+
+한국 영화 api키
+
+47c529b9c9dadb6ff3f47bd767454410
