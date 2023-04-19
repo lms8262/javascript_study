@@ -18,6 +18,9 @@ bb51d3adf7f25504f29f4b4426a7ccbe
 https://image.tmdb.org/t/p/w500/
 https://image.tmdb.org/t/p/original/{값}.jpg
 
+영화 동영상
+youtube 키 형태로 들어있음
+youtube영상 넣는법 검색해서 찾아보기
 
 뉴스 api 키
 
