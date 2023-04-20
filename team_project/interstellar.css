@@ -13,15 +13,18 @@ main > section {
 }
 
 main > section:nth-child(1) {
-  height: 450px;
+  /* height: 450px; */
+  height: 100%;
 }
 
 main > section:nth-child(2) {
-  height: 800px;
+  /* height: 800px; */
+  height: 100%;
 }
 
 main > section:nth-child(3) {
-  height: 250px;
+  /* height: 250px; */
+  height: 100%;
 }
 
 .main__top {
@@ -29,8 +32,35 @@ main > section:nth-child(3) {
   align-items: center;
 }
 
+.poster {
+  height: 100%;
+}
+
+.main__top__content {
+  margin-left: 50px;
+}
+
+.poster > img {
+  width: 100%;
+  height: 100%;
+}
+
+.main__middle {
+  height: 100%;
+}
+
+.main__middle > ul {
+  border-bottom: 1px solid silver;
+}
+
 .middle__tab {
   color: black !important;
+  background-color: white !important;
+}
+
+.middle__tab.active {
+  font-weight: bold;
+  background-color: rgba(192, 192, 192, 0.5) !important;
 }
 
 /* 푸터 */

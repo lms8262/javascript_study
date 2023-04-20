@@ -1,0 +1,13 @@
+영화api
+bb51d3adf7f25504f29f4b4426a7ccbe
+
+이미지주소
+https://image.tmdb.org/t/p/original/
+
+imageAPI
+https://api.themoviedb.org/3/movie/157336/images?api_key=bb51d3adf7f25504f29f4b4426a7ccbe&include_image_language=ko%2Cnull
+이미지,포스터
+
+movieAPI
+https://api.themoviedb.org/3/movie/157336?api_key=bb51d3adf7f25504f29f4b4426a7ccbe&language=ko-KR
+제목,영어부제,개봉년월일,장르,러닝타임,평점
