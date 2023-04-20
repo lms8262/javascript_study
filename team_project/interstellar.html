@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interstellar</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./interstellar.css" />
+    <!-- 부트스트랩 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header></header>
+      <main class="container">
+        <section>
+          <div class="row main__top">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+              <div class="poster"><img src="#" alt="포스터" /></div>
+            </div>
+            <div class="col-md-7">
+              <div>
+                <h2 id="title">제목</h2>
+                <br />
+                <p>영어부제, 개봉연도</p>
+                <p>개봉년월일</p>
+                <p>장르</p>
+                <p>제작국가</p>
+                <p>러닝타임</p>
+                <p>평점</p>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </section>
+        <section>
+          <div class="main__middle">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active middle__tab"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  주요정보
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link middle__tab"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  출연/제작
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link middle__tab"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  영상/포토
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+                tabindex="0"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+                tabindex="0"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-contact"
+                role="tabpanel"
+                aria-labelledby="pills-contact-tab"
+                tabindex="0"
+              >
+                ...
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>추천 영화</h2>
+          <div class="row main__bottom">
+            <div class="col-md-2">
+              <div class="card">
+                <img src="#" class="card-img-top" alt="추천 영화" />
+                <div class="card-body">
+                  <h5 class="card-title">추천 영화 제목</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card">
+                <img src="#" class="card-img-top" alt="추천 영화" />
+                <div class="card-body">
+                  <h5 class="card-title">추천 영화 제목</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card">
+                <img src="#" class="card-img-top" alt="추천 영화" />
+                <div class="card-body">
+                  <h5 class="card-title">추천 영화 제목</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card">
+                <img src="#" class="card-img-top" alt="추천 영화" />
+                <div class="card-body">
+                  <h5 class="card-title">추천 영화 제목</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card">
+                <img src="#" class="card-img-top" alt="추천 영화" />
+                <div class="card-body">
+                  <h5 class="card-title">추천 영화 제목</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card">
+                <img src="#" class="card-img-top" alt="추천 영화" />
+                <div class="card-body">
+                  <h5 class="card-title">추천 영화 제목</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+      <!-- 제이쿼리 -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <!-- js -->
+      <script src="./interstellar.js"></script>
+    </div>
+  </body>
+</html>
