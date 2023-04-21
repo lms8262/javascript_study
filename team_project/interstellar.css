@@ -10,30 +10,12 @@ header {
 
 main > section {
   margin: 50px 0;
-}
-
-main > section:nth-child(1) {
-  /* height: 450px; */
-  height: 100%;
-}
-
-main > section:nth-child(2) {
-  /* height: 800px; */
-  height: 100%;
-}
-
-main > section:nth-child(3) {
-  /* height: 250px; */
   height: 100%;
 }
 
 .main__top {
   height: 100%;
   align-items: center;
-}
-
-.poster {
-  height: 100%;
 }
 
 .main__top__content {
