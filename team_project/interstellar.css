@@ -33,6 +33,7 @@ main > section {
 
 .main__middle > ul {
   border-bottom: 1px solid silver;
+  padding-bottom: 10px;
 }
 
 .middle__tab {
@@ -43,6 +44,10 @@ main > section {
 .middle__tab.active {
   font-weight: bold;
   background-color: rgba(192, 192, 192, 0.5) !important;
+}
+
+.tab__content > div {
+  margin-bottom: 80px;
 }
 
 /* 푸터 */

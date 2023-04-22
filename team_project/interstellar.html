@@ -34,8 +34,12 @@
             </div>
             <div class="col-md-7">
               <div class="main__top__content">
-                <h2 id="title">제목</h2>
-                <p><span id="sub_title">영어부제</span>,<span>2014</span></p>
+                <h2 id="title" style="margin-left: -5px">제목</h2>
+                <p>
+                  <span id="sub_title">영어부제</span>,<span id="release_year"
+                    >개봉년도</span
+                  >
+                </p>
                 <br />
                 <p>
                   <span>개봉</span
@@ -124,16 +128,50 @@
 
             <div class="tab-content" id="pills-tabContent">
               <div
-                class="tab-pane fade show active"
+                class="tab-pane fade show active tab__content"
                 id="pills-home"
                 role="tabpanel"
                 aria-labelledby="pills-home-tab"
                 tabindex="0"
               >
-                ...
+                <div id="overview" style="line-height: 1.7em"></div>
+                <div>
+                  <h5
+                    style="
+                      border-bottom: 1px solid silver;
+                      padding-bottom: 10px;
+                    "
+                  >
+                    출연진
+                  </h5>
+                  <div class="row cast-list"></div>
+                </div>
+                <div>
+                  <h5
+                    style="
+                      border-bottom: 1px solid silver;
+                      padding-bottom: 10px;
+                    "
+                  >
+                    영상/포토
+                  </h5>
+                  <div class="row simple-trailer">
+                    <div class="col-md-6">
+                      <div class="card">
+                        <video src="#">영상을 재생할 수 없습니다.</video>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card">
+                        <video src="#">영상을 재생할 수 없습니다.</video>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row simple-image">2</div>
+                </div>
               </div>
               <div
-                class="tab-pane fade"
+                class="tab-pane fade tab__content"
                 id="pills-profile"
                 role="tabpanel"
                 aria-labelledby="pills-profile-tab"
@@ -142,7 +180,7 @@
                 ...
               </div>
               <div
-                class="tab-pane fade"
+                class="tab-pane fade tab__content"
                 id="pills-contact"
                 role="tabpanel"
                 aria-labelledby="pills-contact-tab"
@@ -154,57 +192,8 @@
           </div>
         </section>
         <section>
-          <h2>추천 영화</h2>
-          <div class="row main__bottom">
-            <div class="col-md-2">
-              <div class="card">
-                <img src="#" class="card-img-top" alt="추천 영화" />
-                <div class="card-body">
-                  <h5 class="card-title">추천 영화 제목</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="card">
-                <img src="#" class="card-img-top" alt="추천 영화" />
-                <div class="card-body">
-                  <h5 class="card-title">추천 영화 제목</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="card">
-                <img src="#" class="card-img-top" alt="추천 영화" />
-                <div class="card-body">
-                  <h5 class="card-title">추천 영화 제목</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="card">
-                <img src="#" class="card-img-top" alt="추천 영화" />
-                <div class="card-body">
-                  <h5 class="card-title">추천 영화 제목</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="card">
-                <img src="#" class="card-img-top" alt="추천 영화" />
-                <div class="card-body">
-                  <h5 class="card-title">추천 영화 제목</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="card">
-                <img src="#" class="card-img-top" alt="추천 영화" />
-                <div class="card-body">
-                  <h5 class="card-title">추천 영화 제목</h5>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h3>추천 영화</h3>
+          <div class="row main__bottom"></div>
         </section>
       </main>
       <footer></footer>
