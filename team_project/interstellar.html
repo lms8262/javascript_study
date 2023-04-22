@@ -36,7 +36,8 @@
               <div class="main__top__content">
                 <h2 id="title" style="margin-left: -5px">제목</h2>
                 <p>
-                  <span id="sub_title">영어부제</span>,<span id="release_year"
+                  <span id="sub_title">영어부제</span>,&nbsp;<span
+                    id="release_year"
                     >개봉년도</span
                   >
                 </p>
@@ -136,38 +137,13 @@
               >
                 <div id="overview" style="line-height: 1.7em"></div>
                 <div>
-                  <h5
-                    style="
-                      border-bottom: 1px solid silver;
-                      padding-bottom: 10px;
-                    "
-                  >
-                    출연진
-                  </h5>
+                  <h4>출연진</h4>
                   <div class="row cast-list"></div>
                 </div>
                 <div>
-                  <h5
-                    style="
-                      border-bottom: 1px solid silver;
-                      padding-bottom: 10px;
-                    "
-                  >
-                    영상/포토
-                  </h5>
-                  <div class="row simple-trailer">
-                    <div class="col-md-6">
-                      <div class="card">
-                        <video src="#">영상을 재생할 수 없습니다.</video>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card">
-                        <video src="#">영상을 재생할 수 없습니다.</video>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row simple-image">2</div>
+                  <h4>영상/포토</h4>
+                  <div class="row simple-trailer"></div>
+                  <div class="row simple-image"></div>
                 </div>
               </div>
               <div
@@ -177,7 +153,12 @@
                 aria-labelledby="pills-profile-tab"
                 tabindex="0"
               >
-                ...
+                <div>
+                  <h4>감독</h4>
+                  <div class="row" id="director">
+                    <div class="col-md-8"></div>
+                  </div>
+                </div>
               </div>
               <div
                 class="tab-pane fade tab__content"
@@ -192,7 +173,15 @@
           </div>
         </section>
         <section>
-          <h3>추천 영화</h3>
+          <h3
+            style="
+              border-bottom: 1px solid silver;
+              padding-bottom: 10px;
+              margin-bottom: 20px;
+            "
+          >
+            추천 영화
+          </h3>
           <div class="row main__bottom"></div>
         </section>
       </main>

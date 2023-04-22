@@ -31,6 +31,13 @@ main > section {
   height: 100%;
 }
 
+.main__middle h4 {
+  border-bottom: 1px solid silver;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
 .main__middle > ul {
   border-bottom: 1px solid silver;
   padding-bottom: 10px;

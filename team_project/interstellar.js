@@ -67,7 +67,7 @@
     return tempMovie;
   }
 
-  //추천 영화 함수 선언
+  // 추천 영화 함수 선언
   function getRecommend() {
     var recommendAPI =
       "https://api.themoviedb.org/3/movie/157336/recommendations?api_key=bb51d3adf7f25504f29f4b4426a7ccbe&language=ko-KR&page=1";
@@ -82,7 +82,7 @@
         let i = 0;
 
         for (const recommendMovie of recommendMovies) {
-          let movieImageURL = `https://image.tmdb.org/t/p/original${recommendMovie.poster_path}`;
+          let recommendMovieImageURL = `https://image.tmdb.org/t/p/original${recommendMovie.poster_path}`;
 
           if (recommendMovie.title.length > 10) {
             continue;
@@ -93,11 +93,11 @@
           }
           i++;
 
-          //데이터 바인딩
+          // 데이터 바인딩
           $(".main__bottom").append(`
           <div class="col-md-2">
             <div class="card h-100">
-              <img src="${movieImageURL}" class="card-img-top h-100" alt="추천 영화">
+              <img src="${recommendMovieImageURL}" class="card-img-top h-100" alt="추천 영화">
               <div class="card-body">
                 <h5 class="card-title">${recommendMovie.title}</h5>
               </div>
@@ -126,7 +126,28 @@
       success: function (data) {
         const castList = data.cast;
         let i = 0;
+        const directorImageURL = `https://image.tmdb.org/t/p/original${data.crew[1].profile_path}`;
 
+        // 감독 데이터 바인딩
+        $("#director").prepend(`<div class="col-md-4">
+        <div class="card" style="border: none">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="${directorImageURL}"
+                class="img-fluid rounded-start"
+                alt="감독 이미지"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${data.crew[1].name}</h5>
+                <p class="card-text">${data.crew[1].job}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`);
         for (const cast of castList) {
           let castImageURL = `https://image.tmdb.org/t/p/original${cast.profile_path}`;
 
@@ -135,7 +156,7 @@
           }
           i++;
 
-          //데이터 바인딩
+          // 데이터 바인딩
           $(".cast-list").append(`<div class="col-md-2">
           <div class="card h-100">
             <img src="${castImageURL}" class="card-img-top" alt="배우사진" />
@@ -145,6 +166,69 @@
             </div>
           </div>
         </div>`);
+        }
+      },
+      error: function (request, status, error) {
+        console.log("code:" + request.status);
+        console.log("message:" + request.responseText);
+        console.log("error:" + error);
+      },
+    });
+  }
+
+  // 예고편 영상 함수 선언
+  function getTrailer() {
+    var tempTrailer = {};
+    var trailerAPI =
+      "https://api.themoviedb.org/3/movie/157336/videos?api_key=bb51d3adf7f25504f29f4b4426a7ccbe&language=ko-KR";
+
+    $.ajax({
+      type: "GET",
+      url: trailerAPI,
+      dataType: "json",
+      async: false,
+      success: function (data) {
+        const trailer = data.results[3].key;
+        const trailer2 = data.results[4].key;
+
+        tempTrailer.trailer = trailer;
+        tempTrailer.trailer2 = trailer2;
+      },
+      error: function (request, status, error) {
+        console.log("code:" + request.status);
+        console.log("message:" + request.responseText);
+        console.log("error:" + error);
+      },
+    });
+    return tempTrailer;
+  }
+
+  // 이미지 함수 선언
+  function getImage() {
+    var imageAPI =
+      "https://api.themoviedb.org/3/movie/157336/images?api_key=bb51d3adf7f25504f29f4b4426a7ccbe&include_image_language=ko%2Cnull";
+
+    $.ajax({
+      type: "GET",
+      url: imageAPI,
+      dataType: "json",
+      async: false,
+      success: function (data) {
+        const images = data.backdrops;
+        let i = 0;
+
+        for (const image of images) {
+          let imageURL = `https://image.tmdb.org/t/p/original${image.file_path}`;
+
+          if (i === 4) {
+            break;
+          }
+          i++;
+
+          //데이터 바인딩
+          $(".simple-image").append(
+            `<div class="col-md-3"><img src="${imageURL}" alt="영화 이미지" width="100%" height="100%"></div>`
+          );
         }
       },
       error: function (request, status, error) {
@@ -178,9 +262,41 @@
     <br>${tempMovie.overview[2]}.<br>${tempMovie.overview[3]}.<br>${tempMovie.overview[4]}`
   );
 
-  //추천 영화
+  // 추천 영화
   getRecommend();
 
-  //출연진
+  // 출연진
   getCast();
+
+  // 예고편 영상
+  let tempTrailer = getTrailer();
+  $(".simple-trailer").append(`<div class="col-md-6">
+    <div>
+      <iframe
+        width="100%"
+        height="350"
+        src="https://www.youtube.com/embed/${tempTrailer.trailer}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>`);
+  $(".simple-trailer").append(`<div class="col-md-6">
+    <div>
+      <iframe
+        width="100%"
+        height="350"
+        src="https://www.youtube.com/embed/${tempTrailer.trailer2}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>`);
+
+  //이미지
+  getImage();
 })();
