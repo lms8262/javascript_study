@@ -11,7 +11,7 @@
       dataType: "json",
       async: false,
       success: function (data) {
-        const poster = data.posters[0].file_path;
+        const poster = data.posters[4].file_path;
 
         tempPoster.poster = poster;
       },
@@ -82,22 +82,22 @@
         let i = 0;
 
         for (const recommendMovie of recommendMovies) {
-          let recommendMovieImageURL = `https://image.tmdb.org/t/p/original${recommendMovie.poster_path}`;
+          let recommendMovieImageURL = `https://image.tmdb.org/t/p/w500${recommendMovie.poster_path}`;
 
           if (recommendMovie.title.length > 10) {
             continue;
           }
 
-          if (i === 6) {
+          if (i == 6) {
             break;
           }
           i++;
 
-          // 데이터 바인딩
+          // 추천 영화 데이터 바인딩
           $(".main__bottom").append(`
           <div class="col-md-2">
             <div class="card h-100">
-              <img src="${recommendMovieImageURL}" class="card-img-top h-100" alt="추천 영화">
+              <img src="${recommendMovieImageURL}" class="card-img-top h-100 img" alt="추천 영화">
               <div class="card-body">
                 <h5 class="card-title">${recommendMovie.title}</h5>
               </div>
@@ -126,17 +126,18 @@
       success: function (data) {
         const castList = data.cast;
         let i = 0;
-        const directorImageURL = `https://image.tmdb.org/t/p/original${data.crew[1].profile_path}`;
+        const directorImageURL = `https://image.tmdb.org/t/p/w500${data.crew[1].profile_path}`;
 
         // 감독 데이터 바인딩
-        $("#director").prepend(`<div class="col-md-4">
+        $("#director").prepend(`<div class="col-md-3">
         <div class="card" style="border: none">
           <div class="row g-0">
             <div class="col-md-4">
               <img
                 src="${directorImageURL}"
-                class="img-fluid rounded-start"
+                class="img-fluid rounded-start img"
                 alt="감독 이미지"
+                style="border-radius: 10px"
               />
             </div>
             <div class="col-md-8">
@@ -149,23 +150,87 @@
         </div>
       </div>`);
         for (const cast of castList) {
-          let castImageURL = `https://image.tmdb.org/t/p/original${cast.profile_path}`;
+          let castImageURL = `https://image.tmdb.org/t/p/w500${cast.profile_path}`;
 
-          if (i === 6) {
-            break;
+          // 상세 출연진 데이터 바인딩
+          if (cast.profile_path) {
+            $("#actor").append(`<div class="col-md-3 mb-5">
+            <div class="card" style="border: none">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="${castImageURL}"
+                    class="img-fluid rounded-start img"
+                    alt="출연진 이미지"
+                    style="border-radius: 10px"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">${cast.name}</h5>
+                    <p class="card-text">${cast.character}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`);
+          } else {
+            if (cast.gender == 1) {
+              $("#actor").append(`<div class="col-md-3 mb-5">
+              <div class="card" style="border: none">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./image/female.svg"
+                      class="img-fluid rounded-start"
+                      alt="출연진 이미지"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">${cast.name}</h5>
+                      <p class="card-text">${cast.character}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>`);
+            } else {
+              $("#actor").append(`<div class="col-md-3 mb-5">
+            <div class="card" style="border: none">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./image/male.svg"
+                    class="img-fluid rounded-start"
+                    alt="출연진 이미지"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">${cast.name}</h5>
+                    <p class="card-text">${cast.character}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`);
+            }
+          }
+
+          if (i <= 5) {
+            // 간단 출연진 데이터 바인딩
+            $(".cast-list").append(`<div class="col-md-2">
+            <div class="card h-100">
+              <img src="${castImageURL}" class="card-img-top img" alt="배우사진" />
+              <div class="card-body">
+                <h5 class="card-title">${cast.name}</h5>
+                <p class="card-text">${cast.character}</p>
+              </div>
+            </div>
+          </div>`);
           }
           i++;
-
-          // 데이터 바인딩
-          $(".cast-list").append(`<div class="col-md-2">
-          <div class="card h-100">
-            <img src="${castImageURL}" class="card-img-top" alt="배우사진" />
-            <div class="card-body">
-              <h5 class="card-title">${cast.name}</h5>
-              <p class="card-text">${cast.character}</p>
-            </div>
-          </div>
-        </div>`);
         }
       },
       error: function (request, status, error) {
@@ -193,6 +258,30 @@
 
         tempTrailer.trailer = trailer;
         tempTrailer.trailer2 = trailer2;
+
+        const detailTrailers = data.results;
+        let i = 0;
+        for (const detailTrailer of detailTrailers) {
+          let trailerURL = `https://www.youtube.com/embed/${detailTrailer.key}`;
+          if (!(i == 0)) {
+            //상세 영상 데이터 바인딩
+            $(".detail-trailer").append(`<div class="col-md-6">
+              <div>
+                <iframe
+                  width="100%"
+                  height="350"
+                  src="${trailerURL}"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  style="border-radius: 10px"
+                ></iframe>
+              </div>
+            </div>`);
+          }
+          i++;
+        }
       },
       error: function (request, status, error) {
         console.log("code:" + request.status);
@@ -220,15 +309,18 @@
         for (const image of images) {
           let imageURL = `https://image.tmdb.org/t/p/original${image.file_path}`;
 
-          if (i === 4) {
-            break;
+          // 상세 이미지 데이터 바인딩
+          $(".detail-photo").append(
+            `<div class="col-md-3 mb-5"><img src="${imageURL}" alt="영화 이미지" width="100%" height="100%" class="img" style="border-radius: 10px"></div>`
+          );
+
+          if (i <= 3) {
+            // 간단 이미지 데이터 바인딩
+            $(".simple-image").append(
+              `<div class="col-md-3"><img src="${imageURL}" alt="영화 이미지" width="100%" height="100%" class="img" style="border-radius: 10px"></div>`
+            );
           }
           i++;
-
-          //데이터 바인딩
-          $(".simple-image").append(
-            `<div class="col-md-3"><img src="${imageURL}" alt="영화 이미지" width="100%" height="100%"></div>`
-          );
         }
       },
       error: function (request, status, error) {
@@ -243,7 +335,7 @@
 
   // 포스터
   let tempPoster = getPoster();
-  let posterURL = "https://image.tmdb.org/t/p/original" + tempPoster.poster;
+  let posterURL = "https://image.tmdb.org/t/p/w500" + tempPoster.poster;
   $(".poster > img").attr("src", posterURL);
 
   // 영화 정보
@@ -280,6 +372,7 @@
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
+        style="border-radius: 10px"
       ></iframe>
     </div>
   </div>`);
@@ -293,10 +386,24 @@
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
+        style="border-radius: 10px"
       ></iframe>
     </div>
   </div>`);
 
   //이미지
   getImage();
+
+  // 모달 이벤트
+  let modal_img = document.querySelector(".modal_content");
+
+  $(".img").click(function () {
+    let img = new Image();
+    img.src = $(this).attr("src");
+    modal_img.src = img.src;
+    $(".modal").fadeIn();
+  });
+  $(".modal").click(function () {
+    $(".modal").fadeOut();
+  });
 })();
