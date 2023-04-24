@@ -181,7 +181,7 @@
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="./image/female.svg"
+                      src="./images/female.svg"
                       class="img-fluid rounded-start"
                       alt="출연진 이미지"
                     />
@@ -201,7 +201,7 @@
               <div class="row g-0">
                 <div class="col-md-4">
                   <img
-                    src="./image/male.svg"
+                    src="./images/male.svg"
                     class="img-fluid rounded-start"
                     alt="출연진 이미지"
                   />
