@@ -401,9 +401,11 @@
     let img = new Image();
     img.src = $(this).attr("src");
     modal_img.src = img.src;
+    document.body.style.overflow = "hidden";
     $(".modal").fadeIn();
   });
   $(".modal").click(function () {
+    document.body.style.overflow = "unset";
     $(".modal").fadeOut();
   });
 })();
