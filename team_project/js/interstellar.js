@@ -46,6 +46,8 @@
         const voteAverage = data.vote_average;
         const tagline = data.tagline;
         const overview = data.overview.split(". ");
+        const budget = data.budget;
+        const revenue = data.revenue;
 
         tempMovie.title = title;
         tempMovie.subTitle = subTitle;
@@ -57,6 +59,8 @@
         tempMovie.voteAverage = voteAverage.toFixed(1);
         tempMovie.tagline = tagline;
         tempMovie.overview = overview;
+        tempMovie.budget = budget;
+        tempMovie.revenue = revenue;
       },
       error: function (request, status, error) {
         console.log("code:" + request.status);
@@ -353,6 +357,13 @@
     `<br><b>${tempMovie.tagline}</b><br><br>${tempMovie.overview[0]}.<br>${tempMovie.overview[1]}.
     <br>${tempMovie.overview[2]}.<br>${tempMovie.overview[3]}.<br>${tempMovie.overview[4]}`
   );
+  $("#budget").append(
+    `$${tempMovie.budget.substr(0, 3)},${tempMovie.budget.substr(
+      3,
+      6
+    )},${tempMovie.budget.substr(6)}`
+  );
+  $("#revenue").text();
 
   // 추천 영화
   getRecommend();
