@@ -46,8 +46,8 @@
         const voteAverage = data.vote_average;
         const tagline = data.tagline;
         const overview = data.overview.split(". ");
-        const budget = data.budget;
-        const revenue = data.revenue;
+        const budget = String(data.budget);
+        const revenue = String(data.revenue);
 
         tempMovie.title = title;
         tempMovie.subTitle = subTitle;
@@ -360,10 +360,15 @@
   $("#budget").append(
     `$${tempMovie.budget.substr(0, 3)},${tempMovie.budget.substr(
       3,
-      6
+      3
     )},${tempMovie.budget.substr(6)}`
   );
-  $("#revenue").text();
+  $("#revenue").text(
+    `$${tempMovie.revenue.substr(0, 3)},${tempMovie.revenue.substr(
+      3,
+      3
+    )},${tempMovie.revenue.substr(6)}`
+  );
 
   // 추천 영화
   getRecommend();

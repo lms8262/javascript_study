@@ -28,7 +28,9 @@ main > section {
 #release_date,
 #genre,
 #runtime,
-#vote_average {
+#vote_average,
+#budget,
+#revenue {
   font-weight: bold;
 }
 
