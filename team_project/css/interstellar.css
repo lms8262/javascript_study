@@ -4,12 +4,6 @@ img:hover {
   cursor: pointer;
 }
 
-/* 헤더 */
-header {
-  height: 100px;
-  background-color: gray;
-}
-
 /* 메인 */
 
 main > section {
@@ -59,12 +53,6 @@ main > section {
 
 .tab__content > div {
   margin-bottom: 80px;
-}
-
-/* 푸터 */
-footer {
-  height: 200px;
-  background-color: gray;
 }
 
 /* 모달 */

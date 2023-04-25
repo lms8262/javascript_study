@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>team5 : header / footer</title>
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="fontawesome-free-6.3.0-web/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.3.0-web/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/brands.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/solid.css" />
+
+    <!-- 부트스트랩 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <section class="container-md header__section">
+          <div class="logo">
+            <a href="./index.html"
+              ><img src="images/logo_top.png" alt="로고"
+            /></a>
+          </div>
+        </section>
+      </header>
+
+      <main></main>
+
+      <footer>
+        <section class="row container-md footer__section">
+          <div class="bt__logo col-md-2">
+            <a href="./index.html"
+              ><img src="images/logo_bottom.png" alt="하단로고"
+            /></a>
+          </div>
+          <div class="copy col-md-7">
+            <span>
+              (주)이젠아카데미 주소 인천광역시 남동구 인주대로 593 엔타스 12층
+              <br />
+              Copyright by <strong>Team 5.</strong> All rights reserved.
+            </span>
+          </div>
+          <div class="familysite col-md-3">
+            <select class="site-select" onchange="window.open(value,'_blank');">
+              <option selected disabled>사이트바로가기</option>
+              <option
+                value="https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do"
+              >
+                영화진흥위원회
+              </option>
+              <option value="https://www.cgv.co.kr/">CGV 예매사이트</option>
+              <option value="https://www.themoviedb.org/">The Movie DB</option>
+            </select>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

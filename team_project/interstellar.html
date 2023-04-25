@@ -8,6 +8,19 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./css/interstellar.css" />
+    <link rel="stylesheet" href="./css/common.css" type="text/css" />
+
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.3.0-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.3.0-web/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/brands.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/solid.css" />
 
     <!-- 부트스트랩 -->
     <link
@@ -24,7 +37,15 @@
   </head>
   <body>
     <div class="wrap">
-      <header></header>
+      <header>
+        <section class="container-md header__section">
+          <div class="logo">
+            <a href="./index.html"
+              ><img src="./images/logo_top.png" alt="로고"
+            /></a>
+          </div>
+        </section>
+      </header>
       <main class="container">
         <section>
           <div class="row main__top">
@@ -203,7 +224,34 @@
           <div class="row main__bottom"></div>
         </section>
       </main>
-      <footer></footer>
+      <footer>
+        <section class="row container-md footer__section">
+          <div class="bt__logo col-md-2">
+            <a href="./index.html"
+              ><img src="./images/logo_bottom.png" alt="하단로고"
+            /></a>
+          </div>
+          <div class="copy col-md-7">
+            <span>
+              (주)이젠아카데미 주소 인천광역시 남동구 인주대로 593 엔타스 12층
+              <br />
+              Copyright by <strong>Team 5.</strong> All rights reserved.
+            </span>
+          </div>
+          <div class="familysite col-md-3">
+            <select class="site-select" onchange="window.open(value,'_blank');">
+              <option selected disabled>사이트바로가기</option>
+              <option
+                value="https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do"
+              >
+                영화진흥위원회
+              </option>
+              <option value="https://www.cgv.co.kr/">CGV 예매사이트</option>
+              <option value="https://www.themoviedb.org/">The Movie DB</option>
+            </select>
+          </div>
+        </section>
+      </footer>
 
       <!-- 모달 -->
       <div class="modal">
