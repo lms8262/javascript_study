@@ -348,7 +348,7 @@
     `${tempMovie.genre}/${tempMovie.genre1}/${tempMovie.genre2}`
   );
   $("#runtime").text(`${tempMovie.runtime}분`);
-  $("#vote_average").text(tempMovie.voteAverage);
+  $("#vote_average").text(`★${tempMovie.voteAverage}`);
   $("#overview").append(
     `<br><b>${tempMovie.tagline}</b><br><br>${tempMovie.overview[0]}.<br>${tempMovie.overview[1]}.
     <br>${tempMovie.overview[2]}.<br>${tempMovie.overview[3]}.<br>${tempMovie.overview[4]}`
