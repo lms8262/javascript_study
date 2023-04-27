@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상영 상세페이지</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/johnwick4.css" />
+
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.3.0-web/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/brands.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/solid.css" />
+
+    <!-- 부트 스트랩 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 스와이퍼 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 헤더 -->
+      <header>
+        <section class="container-md header__section">
+          <div class="logo">
+            <a href="../index.html"
+              ><img src="./images/logo_top.png" alt="로고"
+            /></a>
+          </div>
+        </section>
+      </header>
+      <main>
+        <div class="container">
+          <div class="col join-container1">
+            <!-- 영화 메인 -->
+            <div class="row-md-3 main-row1" style="padding-bottom: 40px">
+              <section class="sec1 main__section">
+                <div class="row back-poster">
+                  <div class="col-md-6">
+                    <div class="sec1__sub1">
+                      <div class="sub1__movie1">
+                        <a href="#" class="movie-name-hover">
+                          <span class="movie-name">영화명</span>
+                        </a>
+                      </div>
+
+                      <div class="sub1__movie2">
+                        <span class="movie-day">개봉일&nbsp;</span>
+                        <a href="#">
+                          <span class="movie-value" style="color: white"
+                            >&nbsp;</span
+                          >
+                        </a>
+                        <span class="movie-time">상영시간</span>
+                      </div>
+                      <div class="sub1__movie3">
+                        <span>&nbsp;평점</span>
+
+                        <span style="padding-left: 15px">&nbsp;누적관객수</span>
+                        <br />
+                        <div class="movie-1 group1">평점</div>
+
+                        <div class="movie-3 group1">누적관객수</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="sec1__sub2">
+                      <div class="sub2__movie1 movie-poster">
+                        <a href="#" class="movie-poster__sub1">
+                          <img src="#" alt="영화 메인 포스터" />
+                        </a>
+                      </div>
+                      <button type="button" class="btn btn-dark sub2__movie2">
+                        예매
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- 영화 설명 -->
+            <div class="row-md-2 main-row2">
+              <section class="sec2 main__section">
+                <div class="sec2__sub1">
+                  <h5>개요</h5>
+                  <div class="sec2-sub1__movie">설명--</div>
+                </div>
+                <hr />
+                <br />
+                <div class="sec2__sub2">
+                  <h5>영화 타이틀</h5>
+                  <div class="sec2-sub2__movie">정보---</div>
+                </div>
+              </section>
+            </div>
+
+            <!-- 출연진 목록 -->
+            <div class="row-md-2 main-row3">
+              <section class="sec3 main__section">
+                <hr />
+                <h5>감독 출연진</h5>
+                <br />
+                <div class="sec3__sub1 row container1">
+                  <div class="col-md-2 sec3-staff sec3-staff1">
+                    <div class="card actor-card">
+                      <a href="#">
+                        <img
+                          src="#"
+                          class="card-img-top actor-img staff-img1"
+                          style="height: 200px"
+                          alt="배우"
+                        />
+                      </a>
+                      <div class="card-body">
+                        <a href="#">
+                          <h5 class="card-title staff-name1">Card title</h5>
+                        </a>
+                        <span class="actor-name actor-name1">ddd</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 sec3-staff sec3-staff2">
+                    <div class="card actor-card">
+                      <a href="#">
+                        <img
+                          src="#"
+                          class="card-img-top actor-img staff-img2"
+                          style="height: 200px"
+                          alt="배우"
+                        />
+                      </a>
+                      <div class="card-body">
+                        <a href="#">
+                          <h5 class="card-title staff-name2">Card title</h5>
+                        </a>
+                        <span class="actor-name actor-name2">ddd</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 sec3-staff sec3-staff3">
+                    <div class="card actor-card">
+                      <a href="#">
+                        <img
+                          src="#"
+                          class="card-img-top actor-img staff-img3"
+                          style="height: 200px"
+                          alt="배우"
+                        />
+                      </a>
+                      <div class="card-body">
+                        <a href="#">
+                          <h5 class="card-title staff-name3">Card title</h5>
+                        </a>
+                        <span class="actor-name actor-name3">ddd</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 sec3-staff sec3-staff4">
+                    <div class="card actor-card">
+                      <a href="#">
+                        <img
+                          src="#"
+                          class="card-img-top actor-img staff-img4"
+                          style="height: 200px"
+                          alt="배우"
+                        />
+                      </a>
+                      <div class="card-body">
+                        <a href="#">
+                          <h5 class="card-title staff-name4">Card title</h5>
+                        </a>
+                        <span class="actor-name actor-name4">ddd</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 sec3-staff sec3-staff5">
+                    <div class="card actor-card">
+                      <a href="#">
+                        <img
+                          src="#"
+                          class="card-img-top actor-img staff-img5"
+                          style="height: 200px"
+                          alt="배우"
+                        />
+                      </a>
+                      <div class="card-body">
+                        <a href="#">
+                          <h5 class="card-title staff-name5">Card title</h5>
+                        </a>
+                        <span class="actor-name actor-name5">ddd</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 sec3-staff sec3-staff6">
+                    <div class="card actor-card">
+                      <a href="#">
+                        <img
+                          src="#"
+                          class="card-img-top actor-img staff-img6"
+                          style="height: 200px"
+                          alt="배우"
+                        />
+                      </a>
+                      <div class="card-body">
+                        <a href="#">
+                          <h5 class="card-title staff-name6">Card title</h5>
+                        </a>
+                        <span class="actor-name actor-name6">ddd</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </section>
+            </div>
+
+            <div class="row-md-3 new-image">
+              <h5>영화 포스터</h5>
+              <swiper-container class="swiper">
+                <swiper-slide>
+                  <div class="postermove">
+                    <i class="fa-regular fa-circle-left"></i>
+                  </div>
+                  <img src="#" alt="영화포스터" class="poster1 test" />
+                  <div class="postermove">
+                    <i class="fa-regular fa-circle-right"></i>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="postermove">
+                    <i class="fa-regular fa-circle-left"></i>
+                  </div>
+                  <img src="#" alt="영화포스터" class="poster2 test" />
+                  <div class="postermove">
+                    <i class="fa-regular fa-circle-right"></i>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="postermove">
+                    <i class="fa-regular fa-circle-left"></i>
+                  </div>
+                  <img src="#" alt="영화포스터" class="poster3 test" />
+                  <div class="postermove">
+                    <i class="fa-regular fa-circle-right"></i>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="postermove">
+                    <i class="fa-regular fa-circle-left"></i>
+                  </div>
+                  <img src="#" alt="영화포스터" class="poster4 test" />
+                  <div class="postermove">
+                    <i class="fa-regular fa-circle-right"></i>
+                  </div>
+                </swiper-slide>
+              </swiper-container>
+            </div>
+            <!-- 추천영화 -->
+            <div class="row-md-2 main-row4">
+              <section class="sec4 main__section">
+                <hr />
+                <h5>추천영화</h5>
+                <br />
+                <div class="sec4__sub1 container2">
+                  <div class="row join-container3">
+                    <div class="col-sm-3 sec4-movie sec4-movie1">
+                      <a href="#">
+                        <div class="card movie-card" style="height: 250px">
+                          <img
+                            src="https://image.tmdb.org/t/p/w500/"
+                            class="card-img-top goodmovie goodmovie-img1"
+                            style="height: 150px"
+                            alt="추천영화"
+                          />
+
+                          <div class="card-body">
+                            <h6 class="card-title goodmovie-name1">
+                              Card title
+                            </h6>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-sm-3 sec4-movie sec4-movie2">
+                      <a href="#">
+                        <div class="card movie-card" style="height: 250px">
+                          <img
+                            src="https://image.tmdb.org/t/p/w500/"
+                            class="card-img-top goodmovie goodmovie-img2"
+                            style="height: 150px"
+                            alt="추천영화"
+                          />
+                          <div class="card-body">
+                            <h6 class="card-title goodmovie-name2">
+                              Card title
+                            </h6>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-sm-3 sec4-movie sec4-movie3">
+                      <a href="#">
+                        <div class="card movie-card" style="height: 250px">
+                          <img
+                            src="https://image.tmdb.org/t/p/w500/"
+                            class="card-img-top goodmovie goodmovie-img3"
+                            style="height: 150px"
+                            alt="추천영화"
+                          />
+                          <div class="card-body">
+                            <h6 class="card-title goodmovie-name3">
+                              Card title
+                            </h6>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-sm-3 sec4-movie sec4-movie4">
+                      <a href="#">
+                        <div class="card movie-card" style="height: 250px">
+                          <img
+                            src="https://image.tmdb.org/t/p/w500/"
+                            class="card-img-top goodmovie goodmovie-img4"
+                            style="height: 150px"
+                            alt="추천영화"
+                          />
+                          <div class="card-body">
+                            <h6 class="card-title goodmovie-name4">
+                              Card title
+                            </h6>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- 푸터 -->
+      <footer>
+        <section class="row container-md footer__section">
+          <div class="bt__logo col-md-2">
+            <a href="../index.html"
+              ><img src="./images/logo_bottom.png" alt="하단로고"
+            /></a>
+          </div>
+          <div class="copy col-md-7">
+            <span>
+              (주)이젠아카데미 주소 인천광역시 남동구 인주대로 593 엔타스 12층
+              <br />
+              Copyright by <strong>Team 5.</strong> All rights reserved.
+            </span>
+          </div>
+          <div class="familysite col-md-3">
+            <label for="site-select"></label>
+            <select
+              id="site-select"
+              class="site-select"
+              onchange="window.open(value,'_blank');"
+            >
+              <option selected disabled>사이트바로가기</option>
+              <option
+                value="https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do"
+              >
+                영화진흥위원회
+              </option>
+              <option value="https://www.cgv.co.kr/">CGV 예매사이트</option>
+              <option value="https://www.themoviedb.org/">The Movie DB</option>
+            </select>
+          </div>
+        </section>
+      </footer>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="js/johnwick4.js"></script>
+  </body>
+</html>

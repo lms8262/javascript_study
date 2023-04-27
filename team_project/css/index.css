@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+/* Team 5 Project index CSS */
+
+*{
+    font-size: 20px !important;
+    padding: 0 !important;
+}
+/* 메인영역 */
+
+
+main {
+    height: 100% !important;
+    font-family:  "맑은 고딕";
+    margin: 0 auto !important;
+}
+
+main > section {
+    padding: 5px 0 !important;
+}
+
+.menu {
+    background-color: #000;
+}
+
+.navi {
+    display: flex;
+    justify-content: center;
+}
+
+.navi > ul {
+    width: 50%;
+    padding: 15px !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navi > ul > li {
+    min-width: 33.33%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-list li a {
+    color: #fff !important;
+}
+
+.navi > ul > li:hover a {
+    color: red !important;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+}
+
+.search {
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+}
+
+.movie-search{
+    width: 55% !important;
+    height: 35px;
+    display: flex;
+    margin: 0 auto !important;
+}
+
+.movie-search > input {
+    border-radius: 5px !important;
+}
+
+.movie-search input::placeholder {
+    padding-left: 10px !important;
+    color: #bbb;
+}
+
+.search > div > button {
+    width: 50px; 
+}
+
+/* 이미지슬라이드 */
+
+.imgslide__body {
+    max-height: 800px !important;
+    position: relative;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px !important;
+}
+
+.imgslide_wrap{    
+    max-height: 600px !important;
+}
+
+.swiper-container {
+    width: 90% !important;
+    height: 100% !important;
+} 
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgslide {
+    overflow: hidden !important;
+}
+
+.imgslide > a > img {
+    max-width: 100% !important;
+    width: 100% !important;
+    display: block;
+    margin: 0 auto !important;
+  }
+
+.imgslide span {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-size: 3rem !important;
+    text-shadow: 3px 3px 3px #a5a5a5;
+    color: #fff;
+}  
+
+.imgslide .btn {
+    max-width: 150px !important;
+    height: 45px !important;
+    border-radius: 10px !important;
+    background-color: rgba(255,255,255,0.8) !important;
+    color: #555 !important;
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-size: 20px !important;
+    font-weight: bold;
+    padding: 0 !important;
+    align-items: center !important;
+    position: absolute !important;
+    top: 34%;
+    left: 10%;
+}
+
+
+/* 상세페이지 연결 */
+
+.detail_link {
+    max-width: 50% !important;
+    width: 71% !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 75%;
+    z-index: 100;
+}
+
+.detail_link > a { 
+    min-width: 100px !important;
+    display: flex !important;
+    justify-content: center;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 30px !important;   
+}
+
+.movie img {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border-radius: 15px !important;
+    border: 1px solid #000;
+}
+
+.movie > span {
+    width: 100%;
+    height: 80px !important;    
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 120;
+    text-align: center;
+    font-size: 15px !important;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 auto !important;
+    padding: 5px !important;
+    border-radius: 0 0 15px 15px !important;
+}
+/* 이미지슬라이드 끝 */
+
+/* 현재상영작 시작 */
+.now_playing {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px !important;
+    background-color: #ccc;
+}
+
+.now_playing .tab {
+    text-align: center !important;
+    font-weight: bold !important;
+    color: #000;
+    margin: 0 auto !important;
+    border-bottom: 3px solid #000f !important;
+    padding-bottom: 10px !important;
+    padding-top: 20px !important;
+    font-size: 30px !important;    
+}
+
+.now__bodywrap {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px !important;
+}
+
+.now__body {
+    width: 90%;
+    height: 100% !important;
+    display: flex;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.now_list {
+    width: 13.5% !important;
+    height: 80% !important;
+    margin: 0 14px 20px !important;
+}
+
+.now_list > a {
+    width: 100% !important;
+    margin: 0 auto!important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    position: relative !important;
+    overflow: hidden;
+}
+
+.now-title {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    padding: 5px !important;
+    font-size: 15px !important;
+}
+
+.now__body li:nth-child(6) {
+    width: 14% !important;
+    height: 90% !important;
+}
+
+/* 현재상영작 끝 */
+
+
+/* 영화순위표 */
+.popular {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.5),rgba(0,0,0,0.5)), url(../images/rank_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popular > .tab {
+    text-align: center !important;
+    font-weight: bold !important;
+    color: #000;
+    margin: 0 auto !important;
+    border-bottom: 3px solid #000f !important;
+    padding-bottom: 10px !important;
+    padding-top: 20px !important;
+    font-size: 30px !important;
+    margin-bottom: 15px !important; 
+}
+
+.popular_wrap {
+    width: 100% !important;
+}
+
+.popular__contents{
+    display: flex;
+}
+
+.popular__contents > li {
+    height: 100% !important;
+}
+
+.popular__table{
+    width: 100% !important;
+    background-color: #fff;
+    padding: 10px !important;
+    margin: 0 auto !important;
+}
+
+.table_title {
+    display: flex;
+    text-align: center;
+    padding-bottom: 5px !important;
+    border-bottom: 3px solid #1d1d1d;
+    margin-bottom: 5px !important;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.table_title > li {
+    width: 25%;
+    text-align: center !important;
+}
+
+.table_content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+}
+
+.table_content_list{
+    display: flex;
+}
+
+.table_content_list > li {
+    width: 25%;
+    text-align: center;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #eee;
+    margin: 0 !important;
+}
+
+.table_content_list:hover {
+    background-color: #eee !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}

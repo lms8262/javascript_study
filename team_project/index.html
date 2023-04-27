@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>team5 : header / footer</title>
+    <title>Team 5: 부제목</title>
     <!-- css 연결 -->
-    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <link rel="stylesheet" href="./css/common.css" type="text/css" />
+    <link rel="stylesheet" href="./css/index.css" type="text/css" />
+
+    <!-- Swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="fontawesome-free-6.3.0-web/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.3.0-web/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="./fontawesome-free-6.3.0-web/css/fontawesome.css"
@@ -24,11 +34,20 @@
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
+
+    <!-- javascript 연결 -->
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/index.js" defer></script>
+
+    <!-- 부트스트랩 js -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -42,7 +61,153 @@
         </section>
       </header>
 
-      <main></main>
+      <main class="container-fluid">
+        <!-- 메뉴바 -->
+        <section class="menu">
+          <nav class="container-md navi">
+            <ul class="container menu-list">
+              <li class="col-4"><a href="#imgslide__body">추천영화</a></li>
+              <li class="col-4"><a href="#now_playing">현재상영작</a></li>
+              <li class="col-4"><a href="#popular">랭킹</a></li>
+            </ul>
+          </nav>
+
+          <!-- 검색창 -->
+          <div class="container-md search">
+            <div class="input-group mb-3 movie-search">
+              <label for="search_input"></label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="영화제목을 입력하세요 : )"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                id="search_input"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                <i class="fa-solid fa-magnifying-glass" style="color: #fff"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="imgslide__body" id="imgslide__body">
+          <!-- 이미지슬라이드 -->
+          <div class="imgslide_wrap container-md">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide imgslide" id="interstellar">
+                  <a href="interstellar.html" class="active">
+                    <span>Interstellar </span>
+                    <span class="btn">자세히보기</span>
+                    <img src="images/imgslide_movie1.jpg" alt="인터스텔라" />
+                  </a>
+                </div>
+                <div class="swiper-slide imgslide" id="slamdunk">
+                  <a href="slamdunk.html">
+                    <span>The First Slam Dunk </span>
+                    <span class="btn">자세히보기</span>
+                    <img
+                      src="images/imgslide_movie2.jpg"
+                      alt="더 퍼스트 슬램덩크"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-slide imgslide" id="johnwick">
+                  <a href="johnwick4.html">
+                    <span>John Wick: Chapter 4 </span>
+                    <span class="btn">자세히보기</span>
+                    <img src="images/imgslide_movie3.jpg" alt="존 윅 4" />
+                  </a>
+                </div>
+                <div class="swiper-slide imgslide" id="avatar">
+                  <a href="avatar2.html">
+                    <span class="col">Avatar: The Way of Water </span>
+                    <span class="btn">자세히보기</span>
+                    <img
+                      src="images/imgslide_movie4.jpg"
+                      alt="아바타-물의 길"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <!-- 상세페이지연결 -->
+          <div class="detail_link container-md">
+            <a href="#interstellar" class="movie detail_movie_1 col-md-2">
+              <img
+                src="images/movie1_interstellar-poster.jpg"
+                alt="인터스텔라"
+              />
+              <span class="movie1_title"
+                >인터스텔라<br />개봉일 : 2014.11.06.</span
+              >
+            </a>
+            <a href="#slamdunk" class="movie detail_movie_2 col-md-2">
+              <img
+                src="images/movie2_slam-duck-poster.jpg"
+                alt="더 퍼스트 슬램덩크"
+              />
+              <span class="movie2_title"
+                >더 퍼스트 슬램덩크<br />개봉일 : 2023.01.04.</span
+              >
+            </a>
+            <a href="#johnwick" class="movie detail_movie_3 col-md-2">
+              <img src="images/movie3_john-wick-4-poster.jpg" alt="존 윅 4" />
+              <span class="movie3_title"
+                >존 윅 4<br />개봉일 : 2023.04.12.</span
+              >
+            </a>
+            <a href="#avatar" class="movie detail_movie_4 col-md-2">
+              <img src="images/movie4_avatar-poster.jpg" alt="아바타-물의 길" />
+              <span class="movie4_title"
+                >아바타-물의 길<br />개봉일 : 2022.12.14.</span
+              >
+            </a>
+          </div>
+        </section>
+
+        <!-- ajax 현재상영작 -->
+        <section class="now_playing container-fluid" id="now_playing">
+          <h2 class="tab col-sm-1.5">현재 상영작</h2>
+          <div class="now__bodywrap container-md">
+            <ul class="now__body">
+              <!-- list 는 자바스크립트에서 ajax로 -->
+            </ul>
+          </div>
+        </section>
+
+        <!-- 랭킹 -->
+        <section class="popular container-md" id="popular">
+          <h2 class="tab col-sm-1.5">랭&nbsp;&nbsp;킹</h2>
+          <div class="row container-md popular_wrap">
+            <div class="col-md-2"></div>
+            <div class="popular__body col-md-8">
+              <ul class="popular__contents container-sm">
+                <!-- 영화순위표 -->
+                <li class="popular__table">
+                  <ul class="table_title">
+                    <li class="ranking col-md-2">순위</li>
+                    <li class="movie_title col-md-4">영화명</li>
+                    <li class="movie_share col-md-3">점유율</li>
+                    <li class="movie_audience col-md-3">관객수</li>
+                  </ul>
+                  <div class="table_content container-md"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+        </section>
+      </main>
 
       <footer>
         <section class="row container-md footer__section">
@@ -59,7 +224,12 @@
             </span>
           </div>
           <div class="familysite col-md-3">
-            <select class="site-select" onchange="window.open(value,'_blank');">
+            <label for="site"></label>
+            <select
+              id="site"
+              class="site-select"
+              onchange="window.open(value,'_blank');"
+            >
               <option selected disabled>사이트바로가기</option>
               <option
                 value="https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do"

@@ -1,0 +1,319 @@
+@charset "utf-8";
+
+.wrap {
+  /* max-width: 1440px; */
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none !important;
+  color: black !important;
+  /* display: block !important; */
+}
+
+a:hover {
+  color: gray !important;
+}
+
+h5 {
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+}
+
+h6 {
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+}
+
+.card {
+  display: flex !important;
+  align-items: center;
+  /* --bs-card-spacer-y: none !important; */
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-body > h6:hover {
+  color: gray !important;
+}
+
+.card-title {
+  text-align: center;
+}
+
+/* 헤더 */
+header {
+  padding: 30px !important;
+  background-color: #eee;
+  border-bottom: 2px solid #919191;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+.logo > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 메인 */
+
+main {
+  height: 100%;
+}
+
+.back-poster {
+  background-image: linear-gradient(rgba(20, 20, 10, 0.8), rgba(0, 0, 0, 0.7)),
+    url(../images/fSwYa5q2xRkBoOOjueLpkLf3N1m.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec1 {
+  color: white;
+}
+
+.sec1__sub1 {
+  height: 360px;
+}
+
+.sub1__movie1 {
+  padding-top: 50px;
+  padding-left: 25px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.movie-name-hover {
+  color: white !important;
+}
+
+.sub1__movie2 {
+  padding-left: 30px;
+  font-size: 13px;
+}
+
+.sub1__movie3 {
+  height: 50px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 100px;
+}
+
+.group1 {
+  font-size: 20px;
+  height: 50px;
+  padding: 0 10px 0 0px;
+  display: inline !important;
+}
+
+.sec1__sub2 {
+  height: 360px;
+}
+
+.sub2__movie1 {
+  height: 300px;
+  margin-bottom: 5px;
+  /* margin: 0 150px; */
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-poster__sub1 {
+  width: 40%;
+  height: 100%;
+  display: flex !important;
+  justify-content: center;
+}
+
+.movie-poster > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.sub2__movie2 {
+  width: 200px;
+  height: 50px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.sec2 {
+  text-align: left;
+}
+
+.sec2__sub1 {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.sec2-sub1__movie {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.sec2-sub2__movie {
+  font-style: italic;
+}
+
+/* 메인3 */
+
+.main-row3 {
+  padding-top: 40px !important;
+}
+
+.sec3__sub2 {
+  height: 50px;
+}
+
+.sec3-staff {
+  height: 250px;
+}
+
+.actor-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --bs-card-spacer-y: none !important;
+  --bs-card-title-spacer-y: none !important;
+}
+
+.actor-name {
+  font-size: 0.8em;
+}
+
+.actor-img {
+  width: 100%;
+  height: 100%;
+}
+
+/*  메인4 */
+
+.main-row4 {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.sec4__sub2 {
+  height: 50px;
+}
+
+.movie-card {
+  border: none !important;
+}
+
+.sec4-movie {
+  height: 250px;
+}
+
+.goodmovie {
+  width: 80% !important;
+  height: 80% !important;
+}
+
+/* 푸터 */
+
+footer {
+  min-height: 200px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-color: #eee;
+  padding: 30px 20px !important;
+}
+
+.footer__section {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  padding-top: 20px !important;
+}
+
+.bt__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+.bt__logo > a {
+  display: flex;
+  justify-content: center;
+}
+
+.bt__logo > a > img {
+  width: 80% !important;
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  text-align: center;
+}
+
+.familysite {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.familysite > select {
+  width: 60%;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0 !important;
+}
+
+/* 스와이퍼 */
+
+.new-image {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.swiper {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.test {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.postermove {
+  text-align: center;
+  align-self: center;
+  align-content: center;
+  padding: 0 30px 0 30px;
+  font-size: 30px;
+}
